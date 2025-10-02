@@ -1,7 +1,7 @@
 import {  Scissors, Sparkles } from 'lucide-react'
 import React, { useState } from 'react'
 import axios from "axios";
-import { useAuth } from "@clerk/clerk-react";
+// import { useAuth } from "@clerk/clerk-react";
 import toast from "react-hot-toast";
 
 
@@ -14,37 +14,38 @@ const RemoveObject = () => {
     const [loading, setLoading] = useState(false);
     const [content, setContent] = useState('');
 
-    const {getToken} = useAuth();
+    // const {getToken} = useAuth();
 
 
     const onSubmitHandler = async (e) => {
        e.preventDefault()
-       try {
-      setLoading(true);
-      if(object.split(' ').length > 1){
-       return toast('Please enter only one object name')
-    }
+       return toast.error("This feature is disabled for public") 
+    //    try {
+    //   setLoading(true);
+    //   if(object.split(' ').length > 1){
+    //    return toast('Please enter only one object name')
+    // }
       
-      const fromData = new FormData();
-      fromData.append('image', input);
-      fromData.append('object', object);
+    //   const fromData = new FormData();
+    //   fromData.append('image', input);
+    //   fromData.append('object', object);
 
 
-      const {data} = await axios.post('/api/ai/remove-image-object', fromData, {
-        headers: {
-          Authorization: `Bearer ${await getToken()}`
-        }
-      })
-      if(data.success){
-        setContent(data.content);
-        toast.success("Object removed successfully")
-      }else{
-        toast.error(data.message)
-      }
-    } catch (error) {
-      toast.error(error.message)
-    }
-    setLoading(false)
+    //   const {data} = await axios.post('/api/ai/remove-image-object', fromData, {
+    //     headers: {
+    //       Authorization: `Bearer ${await getToken()}`
+    //     }
+    //   })
+    //   if(data.success){
+    //     setContent(data.content);
+    //     toast.success("Object removed successfully")
+    //   }else{
+    //     toast.error(data.message)
+    //   }
+    // } catch (error) {
+    //   toast.error(error.message)
+    // }
+    // setLoading(false)
     }
 
   return (
