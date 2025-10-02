@@ -1,7 +1,7 @@
 import { EraserIcon, Sparkles } from 'lucide-react'
 import React, { useState } from 'react'
 import axios from "axios";
-import { useAuth } from "@clerk/clerk-react";
+// import { useAuth } from "@clerk/clerk-react";
 import toast from "react-hot-toast";
 
 
@@ -9,7 +9,7 @@ axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
 const RemoveBackground = () => {
 
-  const {getToken} = useAuth();
+  // const {getToken} = useAuth();
 
     const [input, setInput] = useState('');
     const [loading, setLoading] = useState(false);
@@ -17,26 +17,27 @@ const RemoveBackground = () => {
   
     const onSubmitHandler = async (e) => {
       e.preventDefault()
-      try {
-      setLoading(true);
-      const fromData = new FormData();
-      fromData.append('image', input)
+      return toast.error("This feature is disabled for public")
+    //   try {
+    //   setLoading(true);
+    //   const fromData = new FormData();
+    //   fromData.append('image', input)
 
-      const {data} = await axios.post('/api/ai/remove-image-background', fromData, {
-        headers: {
-          Authorization: `Bearer ${await getToken()}`
-        }
-      })
-      if(data.success){
-        setContent(data.content);
-        toast.success("Remove image background successfully")
-      }else{
-        toast.error(data.message)
-      }
-    } catch (error) {
-      toast.error(error.message)
-    }
-    setLoading(false)
+    //   const {data} = await axios.post('/api/ai/remove-image-background', fromData, {
+    //     headers: {
+    //       Authorization: `Bearer ${await getToken()}`
+    //     }
+    //   })
+    //   if(data.success){
+    //     setContent(data.content);
+    //     toast.success("Remove image background successfully")
+    //   }else{
+    //     toast.error(data.message)
+    //   }
+    // } catch (error) {
+    //   toast.error(error.message)
+    // }
+    // setLoading(false)
     }
 
   return (
