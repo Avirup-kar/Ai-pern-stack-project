@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-500/30 pb-6">
                 <div className="md:max-w-96">
                     <img src={assets.logo} alt="" />
-                    <p className="mt-6 text-sm">
+                    <p className="mt-7 text-sm">
                         Experience the power of AI with QuickAi. <br />
                         Transform your content creation with our suite of premium AI tools. Write articles, generate images, and enhance your workflow.
                     </p>
