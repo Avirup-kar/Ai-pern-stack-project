@@ -26,7 +26,7 @@ const Hero = () => {
 
         <div className='mt-2 flex flex-wrap items-center justify-center gap-4 text-sm'>
            <img src={assets.user_group} alt="" className="w-22 h-8"/>
-           <p className="sm:text-[16px] text-gray-600">Trusted by 10k+ people</p>
+           <p className="sm:text-[16px] text-gray-600">Trusted by 10K+ people</p>
         </div>
 
         <div>
