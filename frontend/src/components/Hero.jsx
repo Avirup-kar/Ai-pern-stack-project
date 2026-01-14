@@ -12,7 +12,7 @@ const Hero = () => {
     
         <div className="text-center md-6">
            <h1 className='text-3xl sm:text-5xl md:text-6xl 2xl:text-[75px] font-semibold mx-auto leading-[1.2]'>
-           Create amazing content <br/> with <span className="text-primary">AI Tools</span>
+           Create amazing content <br/> with <span className="text-primary">AI tools</span>
            </h1>
            <p className='max-w-xs sm:max-w-lg 2xl:max-w-xl m-auto max-sm:text-xs py-2 text-gray-600' >
            Transform your content creation with our suite of premium AI tools. Write articles, <br/> generate images, and enhance your workflow.
