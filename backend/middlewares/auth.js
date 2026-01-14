@@ -8,7 +8,7 @@ export const auth = async (req, res, next) => {
     const user = await clerkClient.users.getUser(userId);
 
     if (!user) {
-      return res.json({ success: false, message: "User not found." });
+      return res.json({ success: false, message: "User not found!" });
     }
 
     // Check if user has premium plan
