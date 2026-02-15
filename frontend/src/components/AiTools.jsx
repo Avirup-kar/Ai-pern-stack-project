@@ -14,7 +14,7 @@ const AiTools = () => {
         <h2 className="text-3x1 sm:text-4xl md:text-4xl 2xl:text-[45px] font-semibold mx-auto leading-[1.1] text-gray-700">Powerful AI Tools</h2>
         <p className='mt-2 max-w-xs sm:max-w-lg 2xl:max-w-xl m-auto max-sm:text-xs text-gray-600' >
           Everything you need to create, enhance, and optimize your content with <br/>
-          cutting-edge AI technology.
+          cutting-edge "AI" technology.
         </p>
       </div>
 
