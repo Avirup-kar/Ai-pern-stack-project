@@ -19,7 +19,7 @@ export const getPublishedCreations = async (req, res) => {
       const creations = await sql`SELECT * FROM creations WHERE publish = true ORDER BY created_at DESC`;
       res.json({ success: true, creations})   
     } catch (error) {
-        res.json({ success: false, message: error?.message || "Unknown error" })
+        res.json({ success: false, message: error?.message || "Unknown Error" })
     }
 }
 
@@ -54,6 +54,6 @@ export const toggleLikeCreation = async (req, res) => {
 
       res.json({ success: true, message})   
     } catch (error) {
-        res.json({ success: false, message: error.message || "Unknown error" })
+        res.json({ success: false, message: error.message || "Unknown Error" })
     }
 }
