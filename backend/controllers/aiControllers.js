@@ -127,7 +127,7 @@ export const generateImage = async (req, res) => {
 
   } catch (error) {
     console.error("error.message");
-     res.json({ success: false, message: error.message || "Unknown error" })
+     res.json({ success: false, message: error.message || "Unknown Error" })
   }
 };
 
@@ -165,7 +165,7 @@ export const removeImageBackground = async (req, res) => {
 
   } catch (error) {
     console.error(error.message);
-     res.json({ success: false, message: error.message || "Unknown error" })
+     res.json({ success: false, message: error.message || "Unknown Error" })
   }
 };
 
