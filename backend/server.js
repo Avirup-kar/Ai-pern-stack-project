@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 app.use(clerkMiddleware())
 
-app.get('/', (req, res) => {res.send('Hello Worghjhjfj!')})
+app.get('/', (req, res) => {res.send('Hello World')})
 app.use(requireAuth());
 
 app.use("/api/ai", aiRoutes);
